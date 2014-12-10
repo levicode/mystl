@@ -5,6 +5,7 @@ using namespace std;
 
 SqList::SqList()
 {
+	data=new ElemType [MAXSIZE];
 	length = 0;  //顺序表长度初始化为0
 }
 
@@ -42,7 +43,7 @@ bool SqList::Insert(int index, ElemType element)
 		data[index] = element;  //在index处添加element
 	}
 	else
-		data[length] == element;  //在顺序表末尾添加element
+		data[length] = element;  //在顺序表末尾添加element
 	length++;  //长度加1
 	return true;
 }

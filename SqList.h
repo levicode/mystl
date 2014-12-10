@@ -1,6 +1,6 @@
 #pragma once
-typedef int ElemType  //顺序表元素类型
-const int MAXSIZE=1000;  //顺序表最大长度
+typedef int ElemType;  //顺序表元素类型
+#define MAXSIZE 1000  //顺序表最大长度
 
 class SqList
 {
@@ -15,7 +15,7 @@ public:
 	bool Swap(int a, int b);  //交换两个元素
 	bool Traversal();  //遍历元素
 private:
-	ElemType data[MAXSIZE];  //顺序表元素数据
+	ElemType *data;  //顺序表元素数据
 	int length;  //顺序表长度
 };
 

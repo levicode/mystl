@@ -59,14 +59,14 @@ bool SqStack::GetTop(ElemType &element)
 	if(top == -1)  //顺序栈为空
 		return false;
 
-	element == sqstack[top];  //将栈顶元素赋值给element
+	element = sqstack[top];  //将栈顶元素赋值给element
 	return true;
 }
 
 
 void SqStack::Clear()
 {
-	top == -1;  //栈顶指针置为-1
+	top = -1;  //栈顶指针置为-1
 }
 
 

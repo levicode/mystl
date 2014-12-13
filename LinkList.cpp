@@ -4,7 +4,7 @@ using namespace std;
 
 LinkList::LinkList()
 {
-	head = new LinkNode();  //初始化链表头指针
+	head = (LinkNode*)malloc(sizeof(LinkNode));  //初始化链表头指针
 	head ->data = NULL;
 	head ->next = NULL;
 }
@@ -50,7 +50,7 @@ bool LinkList::Insert(int index, ElemType element)
 	if(index < 0)  //index小于0
 		return false;
 
-	LinkNode *newnode = new LinkNode();  //创建新结点
+	LinkNode *newnode = (LinkNode*)malloc(sizeof(LinkNode));  //创建新结点
 	newnode ->data = element;  //初始化新结点
 	newnode ->next = NULL;
 

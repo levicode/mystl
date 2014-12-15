@@ -74,7 +74,7 @@ bool SqQueue::Traversal()
 	int i = front;
 	while(i != rear)  //从队首元素开始遍历输出元素值
 	{
-		cout<<queue[i]<<endl;
+		cout<< queue[i] << endl;
 		i = (i + 1 + SIZE) % SIZE;  //i向后移动一位
 	}
 	return true;

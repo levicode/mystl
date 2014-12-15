@@ -14,7 +14,7 @@ public:
 	~LinkStack();  //析构函数
 	int Length();  //返回链栈长度
 	bool Empty();  //判断链栈是否为空
-	bool Push(ElemType element);  //向栈中压入一个元素element
+	void Push(ElemType element);  //向栈中压入一个元素element
 	bool Pop(ElemType &elemnet);  //从栈中取出一个元素返回给element
 	bool GetTop(ElemType &element);  //获取栈顶元素返回给element
 	void Clear();  //清空栈

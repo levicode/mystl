@@ -17,7 +17,6 @@ LinkStack::~LinkStack()
 		delete p;
 		p = top;
 	}
-	delete top;
 }
 
 
@@ -40,13 +39,12 @@ bool LinkStack::Empty()
 }
 
 
-bool LinkStack::Push(ElemType element)
+void LinkStack::Push(ElemType element)
 {
 	LinkNode *newnode = (LinkNode*)malloc(sizeof(LinkNode));  //初始化新结点
 	newnode ->data = element;
 	newnode ->next = top;  //新结点的next指向原来的top结点
 	top = newnode; //将栈顶指针指向新结点
-	return true;
 }
 
 

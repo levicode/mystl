@@ -38,10 +38,7 @@ int LinkList::Length()
 
 bool LinkList::Empty()
 {
-	if(head == NULL)  //头指针指向NULL则链表为空
-		return true;
-	else
-		return false;
+	return head == NULL;  //头指针指向NULL则链表为空
 }
 
 

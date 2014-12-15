@@ -1,6 +1,5 @@
 #pragma once
 typedef int ElemType;  //顺序栈元素类型
-int SIZE = 0;  //顺序栈的容量
 
 class SqStack
 {
@@ -17,5 +16,6 @@ public:
 private:
 	ElemType *sqstack;  //顺序栈元素数据
 	int top;  //栈顶指针
+	int SIZE;  //顺序栈的容量
 };
 

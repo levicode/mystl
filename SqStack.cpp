@@ -5,7 +5,7 @@ using namespace std;
 SqStack::SqStack(int size)
 {
 	SIZE = size;  //使用size初始化顺序栈容量
-	sqstack = new ElemType [size];  //初始化顺序栈数组
+	sqstack = new ElemType [SIZE];  //初始化顺序栈数组
 	top = -1;  //初始化栈顶指针
 }
 
@@ -13,7 +13,6 @@ SqStack::SqStack(int size)
 SqStack::~SqStack()
 {
 	delete [] sqstack;  //释放顺序栈元素数组内存
-	SIZE = 0;  //复位顺序栈容量
 }
 
 
@@ -25,10 +24,7 @@ int SqStack::Length()
 
 bool SqStack::Empty()
 {
-	if(top == -1)  //栈顶指针为-1时顺序栈为空
-		return true;
-	else
-		return false;
+	return top == -1;  //栈顶指针为-1时顺序栈为空
 }
 
 

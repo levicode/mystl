@@ -3,9 +3,10 @@
 #include <iostream>
 using namespace std;
 
-SqList::SqList()
+SqList::SqList(int size)
 {
-	data=new ElemType [MAXSIZE];
+	SIZE = size;  //使用size初始化顺序表容量
+	data=new ElemType [SIZE];  //初始化顺序表数组
 	length = 0;  //顺序表长度初始化为0
 }
 
@@ -24,16 +25,13 @@ int SqList::Length()
 
 bool SqList::Empty()
 {
-	if(length == 0)  //顺序表长度为0
-		return true;
-	else
-		return false;
+	return length == 0;  //顺序表长度为0则为空
 }
 
 
 bool SqList::Insert(int index, ElemType element)
 {
-	if(length == MAXSIZE || index < 0)  //顺序表长度达到最大值或index小于0
+	if(length == SIZE || index < 0)  //顺序表长度达到最大值或index小于0
 		return false;
 
 	if(index < length)  //index处存在元素

@@ -36,10 +36,7 @@ int LinkStack::Length()
 
 bool LinkStack::Empty()
 {
-	if(top == NULL)  //栈顶指针指向NULL则链栈为空
-		return true;
-	else
-		return false;
+	return top == NULL;  //栈顶指针指向NULL则链栈为空
 }
 
 

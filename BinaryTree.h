@@ -18,6 +18,7 @@ public:
 	bool InOrder();  //中序遍历二叉树
 	bool PostOrder();  //后序遍历二叉树
 	bool LevelOrder();  //层次遍历二叉树
+	bool Empty();  //判断二叉树是否为空
 private:
 	BTNode *root;  //二叉树根结点指针
 };

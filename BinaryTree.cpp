@@ -11,10 +11,11 @@ void DoPostOrder(BTNode *bt);  //执行后序遍历操作
 
 BinaryTree::BinaryTree()
 {
-	root = (BTNode*)malloc(sizeof(BTNode));  //初始化根结点指针
-	root ->data = NULL;
-	root ->lchild = NULL;
-	root ->rchild = NULL;
+	root = NULL;
+	//root = (BTNode*)malloc(sizeof(BTNode));  //初始化根结点指针
+	//root ->data = NULL;
+	//root ->lchild = NULL;
+	//root ->rchild = NULL;
 }
 
 
@@ -38,7 +39,27 @@ void Destory(BTNode *bt)
 
 void BinaryTree::Create(ElemType data[], int n)
 {
+	BTNode *p, *nodes[MAX];  //nodes数组存放结点,从1开始存放
+	int i, j;
+	for(i = 0; i < n; i++)
+	{
+		p = (BTNode *)malloc(sizeof(BTNode));  //结点分配内存空间
+		p ->data = data[i]; //结点元素赋值
+		p ->lchild = NULL;
+		p ->rchild = NULL;
 
+		nodes[i + 1] = p;  //将新结点放入nodes数组中
+		if(i == 0)  //根结点指向第一个元素
+			root = p;
+		else
+		{
+			j = (i + 1) / 2;  //确定新结点在nodes数组中的父结点
+			if((i + 1) % 2 == 0)  //判断新结点是父结点的左孩子还是右孩子
+				nodes[j] ->lchild = p;
+			else
+				nodes[j] ->rchild = p;
+		}
+	}
 }
 
 
